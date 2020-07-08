@@ -1,0 +1,151 @@
+/*
+ ============================================================================
+ Name        : Student Report Card
+ Author      : vishal kauamr
+ Version     : Verson 1.0
+ Copyright   : Your copyright notice
+ Description : Marksheet of a student in five subjects.
+ ============================================================================
+ */
+
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+
+int main() {
+
+	char name[30],sec,grade;
+		int std,math,eng,hindi,science,social,total;
+
+	setbuf(stdout,NULL);
+	puts("==============================================================");
+	puts("\t\tJawahar Navodya Vidyalay");
+	puts("\t\t  Annual Report Card");
+	puts("==============================================================");
+
+	puts("\n\nEnter Student Name      :");
+	fflush(stdin);
+	gets(name);
+	fflush(stdout);
+	puts("Enter standard       :");
+	fflush(stdin);
+	scanf("%d",&std);
+
+	puts("Enter section         :");
+	fflush(stdin);
+	scanf("%c",&sec);
+
+	lineno35:
+
+	puts("Enter marks of Mathematics      :");
+	fflush(stdin);
+	scanf("%d",&math);
+
+	if ( math<0 || math>100 ) {
+
+		puts("You have entered invalid marks");
+		puts("Press enter to re-enter the marks");
+		getch();
+		system("cls");
+		goto lineno35;
+	}
+
+	lineno50:
+	puts("Enter marks of English        :");
+	fflush(stdin);
+	scanf("%d",&eng);
+
+	if ( eng<0 || eng>100 ) {
+
+			puts("You have entered invalid marks");
+			puts("Press enter to re-enter the marks");
+			getch();
+			system("cls");
+			goto lineno50;
+	}
+
+	lineno65:
+	puts("Enter marks of Hindi         :");
+	fflush(stdin);
+	scanf("%d",&hindi);
+
+	if ( hindi<0 || hindi>100 ) {
+
+			puts("You have entered invalid marks");
+			puts("Press enter to re-enter the marks");
+			getch();
+			system("cls");
+			goto lineno65;
+	}
+
+	lineno80:
+	puts("Enter marks of Science       :");
+	fflush(stdin);
+	scanf("%d",&science);
+
+	if ( science<0 || science>100) {
+
+			puts("You have entered invalid marks");
+			puts("Press enter to re-enter the marks");
+			getch();
+			system("cls");
+			goto lineno80;
+	}
+
+	lineno95:
+
+	puts("Enter marks of Social Science    :");
+	fflush(stdin);
+	scanf("%d",&social);
+
+	if ( social<0 || social>100 ) {
+
+			puts("You have entered invalid marks");
+			puts("Press enter to re-enter the marks");
+			getch();
+			system("cls");
+			goto lineno95;
+		}
+	total = math+eng+hindi+science+social;
+
+		if (total>450 && total<500)
+			grade='A';
+
+		if (total>400 && total<450)
+				grade='B';
+
+		if (total>350 && total<400)
+				grade='C';
+
+		if (total>300 && total<350)
+				grade='D';
+
+		if (total>200 && total<300)
+				grade='E';
+
+		if (total>0 && total<200)
+				grade='F';
+
+		system("cls");
+
+		puts("==============================================================");
+		puts("\t\tJawahar Navodya Vidyalay");
+		puts("\t\t  Annual Report Card");
+		puts("==============================================================");
+
+		printf("\n\n\t\tName    :%s",name);
+		printf("\n\t\tStandard  :%d",std);
+		printf("\n\t\tSection   :%c",sec);
+
+		puts("\n\t\tMarks out of 100");
+
+		printf("\n\t\tMathematics    :%d",math);
+		printf("\n\t\tEnglish   :%d",eng);
+		printf("\n\t\tHindi     :%d",hindi);
+		printf("\n\t\tScience   :%d",science);
+		printf("\n\t\tSocila science  :%d",social);
+
+		printf("\n\n\t\tTotal marks secured   :%d",total);
+		printf("\n\t\tGrade    :%c",grade);
+
+}
