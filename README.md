@@ -1,4 +1,4 @@
-# marks-of-student-c-lanuvage-
+# marks-of-student-c-languvage-
 Algorithm…
 Step 1. start
 Step 2.  read marks or Percentage
